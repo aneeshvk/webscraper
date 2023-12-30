@@ -1,0 +1,65 @@
+{% extends 'councillor.html' %}
+
+{% block content %}
+<div class="col-lg-12">
+
+    <form method="POST"  >
+        <div class="row">
+     <div class="col-lg-12">
+  {% if messages %}
+    {% for message in messages %}
+    <div class="text-danger alert alert-{{message.tags}}">
+        {{message}}
+    </div>
+        {% endfor %}
+    {% endif %}
+     </div>
+ </div>
+
+        {% csrf_token %}
+    <div class="container ">
+
+        <div class="row container">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                <div class="row g-3" >
+
+                    <h3 class="head text-warning" >
+
+
+                        <b>WebScarping</b> </h3>
+
+                    <div class="col col-sm-12 col-md-12 col lg-12 col-xl-10 col-xxl-10" >
+                       {{result}}
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</form>
+<!-- <script>
+    $('form').submit(fuction(){
+        var a= $('#pass1').val();
+        var b=$('#pass2').val();
+        if(a==b){
+            alert("successfullly registered")
+return false;
+
+
+        }
+    }
+    ) ;          </script> -->
+                </div>
+ <div class="row">
+
+    <div class="col-md-12">
+          <h1> </h1>
+    </div>
+  </div>
+{% endblock %}
